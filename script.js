@@ -9,7 +9,7 @@ function showError(input, message) {
   const formControl = input.parentElement;
   formControl.className = 'form-control error';
   const small = formControl.querySelector('small');
-  small.inerText = message;
+  small.innerText = message;
 }
 
 // Show success outline
@@ -18,7 +18,7 @@ function showSuccess(input) {
   formControl.className = 'form-control success';
 }
 
-// Check if email is valid
+// Check email is valid
 function isValidEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
@@ -35,9 +35,9 @@ function checkRequired(inputArr) {
   });
 }
 
-// get field name
-function getFieldName(input) {
-  return input.id.charAt(0).toUpperCase() + input.id.slice();
+// Get field name
+functiongetFieldName(input) {
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // Event listeners
